@@ -32,8 +32,24 @@ try {
 }
 
 app.post("/upload", upload.single("image"), (req, res) => {
+  const data = {
+    state: "success",
+    data: {
+      src: `/uploads/${req.file.filename}`,
+    },
+  };
+
   console.log(req.file);
+  res.status(200).json(data);
 });
+
+app.post(
+  "/uploads",
+  upload.fields([{ name: "image1" }, { name: "image2" }]),
+  (req, res) => {
+    console.log(req.files);
+  }
+);
 
 app.listen(app.get("port"), () => {
   console.log(`${app.get("port")}번으로 서버 실행중`);
