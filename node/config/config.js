@@ -1,6 +1,6 @@
 import dotenv from "dotenv";
 dotenv.config();
-
+/* eslint-disable */
 export default {
   development: {
     username: "root",
