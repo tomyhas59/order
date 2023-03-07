@@ -1,6 +1,7 @@
 import bcrypt from "bcrypt";
 import User from "../models/user.js";
-class UserService {
+import passport from "passport";
+export default class UserService {
   static async signUp(req, res, next) {
     try {
       console.log(req.body);
@@ -24,6 +25,29 @@ class UserService {
       next(err);
     }
   }
-}
 
-export default UserService;
+  static async login(req, res, next) {
+    passport.authenticate("local", (err, user, message) => {
+      if (err) {
+        console.log(err);
+        return next(err);
+      }
+      if (message) {
+        return res.status(401).send(message);
+      }
+      return req.login(user, async (loginErr) => {
+        if (loginErr) {
+          console.error(err);
+          return next(err);
+        }
+        const fullUser = await User.findOne({
+          where: { id: user.id },
+          attributes: {
+            exclude: ["password"],
+          },
+        });
+        return res.status(200).json(fullUser);
+      });
+    })(req, res, next);
+  }
+}
