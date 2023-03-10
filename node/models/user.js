@@ -7,6 +7,7 @@ export default class User extends Sequelize.Model {
         email: {
           type: Sequelize.STRING(100),
           allowNull: false,
+          unique: true,
           comment: "이메일",
         },
         password: {
@@ -25,5 +26,7 @@ export default class User extends Sequelize.Model {
       }
     );
   }
-  static associate(db) {}
+  static associate(db) {
+    db.User.hasMany(db.Post, { foreignKey: "userIdx" });
+  }
 }
