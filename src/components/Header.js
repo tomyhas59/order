@@ -5,7 +5,7 @@ const Header = () => {
     <header>
       <div className="header1">
         <div className="opgg">
-          <div className="logo">opgg</div>
+          <div className="logo">OP.GG</div>
           <a>전적</a>
           <button className="showBox">리그오브레전드</button>
           <a>데스크톱</a>

@@ -1,0 +1,195 @@
+header::after {
+  content: "";
+  display: block;
+  height: 1px;
+  background-color: #1a4ebe;
+}
+
+.header1 {
+  background-color: #1c1c1f;
+  height: 30px;
+  display: flex;
+  color: gray;
+  justify-content: space-between;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.opgg *,
+.login * {
+  margin-left: 10px;
+}
+
+.logo {
+  display: inline;
+}
+
+.header2 {
+  width: 70%;
+  height: 30px;
+  align-items: center;
+  white-space: nowrap;
+  margin: 0 auto;
+  background-color: #5383e8;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header2 div * {
+  margin-left: 10px;
+}
+
+br {
+  background-color: red;
+}
+
+main {
+  width: 70%;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.mainImg {
+  width: 300px;
+  background-color: red;
+  height: 300px;
+  margin: 0 auto;
+}
+
+.contentWrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.bestWrapper {
+  width: 50%;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+.bestWrapper-title {
+  text-align: left;
+  padding: 10px;
+}
+
+.best {
+  display: flex;
+  flex-direction: column;
+}
+.best div {
+  width: 85%;
+  margin: 0 auto;
+  border-bottom: 1px solid silver;
+  text-align: left;
+  padding: 20px;
+}
+
+.info {
+  background-color: #fff;
+  width: 50%;
+  border-radius: 5px;
+  display: grid;
+  grid-template-areas:
+    "a a"
+    "b c"
+    "d e";
+  grid-template-columns: 1fr 1fr;
+}
+
+.info > div {
+  border-bottom: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+}
+
+.bestPlayer {
+  grid-area: a;
+}
+
+.standing {
+  grid-area: b;
+  text-align: left;
+  padding: 10px;
+  .teamButton {
+    text-align: right;
+  }
+}
+
+.lank {
+  grid-area: d;
+  text-align: left;
+  div {
+    padding: 15px;
+    border-bottom: 1px solid silver;
+  }
+}
+.schedule {
+  padding: 10px;
+  text-align: left;
+  grid-area: c;
+  .date {
+    text-align: right;
+  }
+}
+
+.nextGame {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  padding: 5px;
+  grid-area: e;
+  border-bottom: 1px solid silver;
+}
+.nextTeamImg,
+.nextTeamName,
+.nextTeamRatio {
+  display: flex;
+  align-items: center;
+  img {
+    background-color: red;
+    width: 60px;
+    height: 60px;
+  }
+  * {
+    margin-left: 5px;
+  }
+}
+
+footer {
+  width: 70%;
+  margin: 0 auto;
+  color: white;
+  font-size: 12px;
+}
+.footer1 {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  white-space: nowrap;
+  padding: 20px;
+  border-bottom: 1px solid white;
+}
+
+.footer2 {
+  padding: 20px;
+}
+.contact {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.contactImg {
+  img {
+    width: 20px;
+    height: 20px;
+    background-color: red;
+  }
+}

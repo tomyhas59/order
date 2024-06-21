@@ -4,36 +4,36 @@ const Footer = () => {
   return (
     <footer>
       <div className="footer1">
-        <div className="logo"></div>
+        <ul className="logo">OP.GG</ul>
         <ul>
           OP.GG
-          <li></li>
-          <li></li>
-          <li></li>
+          <li>About OP.GG</li>
+          <li>Company</li>
+          <li>Blog</li>
         </ul>
         <ul>
           Products
-          <li></li>
-          <li></li>
-          <li></li>
+          <li>리그 오브 레전드</li>
+          <li>전략적 팀 전투</li>
+          <li>발로란트</li>
         </ul>
         <ul>
           Apps
-          <li></li>
-          <li></li>
-          <li></li>
+          <li>OP.GG for Mobile Android</li>
+          <li>OP.GG for Mobile iOS</li>
+          <li>AllT Android</li>
         </ul>
         <ul>
           Resources
-          <li></li>
-          <li></li>
-          <li></li>
+          <li>개인정보처리방침</li>
+          <li>이용약관</li>
+          <li>도움말</li>
         </ul>
         <ul>
           More
-          <li></li>
-          <li></li>
-          <li></li>
+          <li>제휴</li>
+          <li>광고</li>
+          <li>채용</li>
         </ul>
       </div>
 
