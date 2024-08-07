@@ -5,6 +5,10 @@ import Korean from "./pages/Korean";
 import Chinese from "./pages/Chinese";
 import Japanese from "./pages/Japanese";
 import Western from "./pages/Western";
+import "./App.css";
+import Login from "./pages/Login";
+import Sign from "./pages/Sign";
+
 const App = () => {
   return (
     <BrowserRouter>
@@ -14,6 +18,8 @@ const App = () => {
           <Route path="/chinese" element={<Chinese />} />
           <Route path="/japanese" element={<Japanese />} />
           <Route path="/western" element={<Western />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Sign />} />
         </Routes>
       </AppLayout>
     </BrowserRouter>

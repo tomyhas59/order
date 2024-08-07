@@ -3,9 +3,9 @@ import Header from "./Header";
 
 const AppLayout = ({ children }) => {
   return (
-    <div>
+    <div className="appLayout">
       <Header />
-      <div>{children}</div>
+      <div className="contentContainer">{children}</div>
     </div>
   );
 };
