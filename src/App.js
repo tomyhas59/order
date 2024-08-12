@@ -10,14 +10,65 @@ import Login from "./pages/Login";
 import Sign from "./pages/Sign";
 
 const App = () => {
+  const data = {
+    korean: [
+      {
+        menu: "김치찌개",
+        price: "7000원",
+      },
+      {
+        menu: "된장찌개",
+        price: "6000원",
+      },
+      {
+        menu: "닭볶음탕",
+        price: "26000원",
+      },
+      {
+        menu: "소불고기",
+        price: "9000원",
+      },
+    ],
+    japanese: [
+      {
+        menu: "초밥",
+        price: "17000원",
+      },
+      {
+        menu: "우동",
+        price: "5000원",
+      },
+    ],
+    chinese: [
+      {
+        menu: "짜장면",
+        price: "7000원",
+      },
+      {
+        menu: "짬뽕",
+        price: "8000원",
+      },
+    ],
+    western: [
+      {
+        menu: "햄버거",
+        price: "4000원",
+      },
+      {
+        menu: "피자",
+        price: "18000원",
+      },
+    ],
+  };
+
   return (
     <BrowserRouter>
       <AppLayout>
         <Routes>
-          <Route path="/" element={<Korean />} />
-          <Route path="/chinese" element={<Chinese />} />
-          <Route path="/japanese" element={<Japanese />} />
-          <Route path="/western" element={<Western />} />
+          <Route path="/" element={<Korean data={data.korean} />} />
+          <Route path="/chinese" element={<Chinese data={data.chinese} />} />
+          <Route path="/japanese" element={<Japanese data={data.japanese} />} />
+          <Route path="/western" element={<Western data={data.western} />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Sign />} />
         </Routes>

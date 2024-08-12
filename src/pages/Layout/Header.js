@@ -1,30 +1,48 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+const Category = ({ to, children }) => (
+  <li className="category">
+    <Link to={to}>{children}</Link>
+  </li>
+);
+
 const Header = () => {
+  const menuItems = [
+    { path: "/", label: "한식" },
+    { path: "/chinese", label: "중식" },
+    { path: "/japanese", label: "일식" },
+    { path: "/western", label: "양식" },
+  ];
+
+  const signItems = [
+    { path: "/login", label: "로그인" },
+    { path: "/signup", label: "회원가입" },
+  ];
+
   return (
-    <div className="headerContainer">
+    <div className="header-container">
+      <div className="logo">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        요기요요
+      </div>
       <ul className="country">
-        <li>
-          <Link to="/">한식</Link>
-        </li>
-        <li>
-          <Link to="/chinese">중식</Link>
-        </li>
-        <li>
-          <Link to="/japanese">일식</Link>
-        </li>
-        <li>
-          <Link to="/western">양식</Link>
-        </li>
+        {menuItems.map((item, index) => (
+          <Category key={index} to={item.path}>
+            {item.label}
+          </Category>
+        ))}
       </ul>
+
       <ul className="sign">
-        <li>
-          <Link to="/login">로그인</Link>
-        </li>
-        <li>
-          <Link to="/signup">회원가입</Link>
-        </li>
+        {signItems.map((item, index) => (
+          <Category key={index} to={item.path}>
+            {item.label}
+          </Category>
+        ))}
       </ul>
     </div>
   );

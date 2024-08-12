@@ -1,7 +1,8 @@
 import React from "react";
+import MenuListRenderer from "../components/MenuListRenderer";
 
-const Chinese = () => {
-  return <div>중식</div>;
+const Chinese = ({ data }) => {
+  return <MenuListRenderer data={data} />;
 };
 
 export default Chinese;

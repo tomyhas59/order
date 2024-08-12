@@ -1,7 +1,8 @@
 import React from "react";
+import MenuListRenderer from "../components/MenuListRenderer";
 
-const Western = () => {
-  return <div>양식</div>;
+const Western = ({ data }) => {
+  return <MenuListRenderer data={data} />;
 };
 
 export default Western;
