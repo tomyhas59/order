@@ -137,7 +137,6 @@ const Button = styled.button`
 
 const ToggleContainer = styled.div`
   position: absolute;
-  border: 1px solid;
   left: 50%;
   width: 50%;
   height: 100%;
@@ -187,7 +186,7 @@ const ToggleRight = styled.div`
   ${ToggleCommonStyles}
   right: 0;
   transform: ${(props) =>
-    props.active ? "translateX(200%)" : "translateX(0)"};
+    props.active ? "translateX(100%)" : "translateX(0)"};
 `;
 
 const ToggleLeft = styled.div`
