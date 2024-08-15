@@ -6,7 +6,6 @@ import Chinese from "./pages/Chinese";
 import Japanese from "./pages/Japanese";
 import Western from "./pages/Western";
 import "./App.css";
-import Login from "./pages/Login";
 import Sign from "./pages/Sign";
 
 const App = () => {
@@ -69,8 +68,7 @@ const App = () => {
           <Route path="/chinese" element={<Chinese data={data.chinese} />} />
           <Route path="/japanese" element={<Japanese data={data.japanese} />} />
           <Route path="/western" element={<Western data={data.western} />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/signup" element={<Sign />} />
+          <Route path="/sign" element={<Sign />} />
         </Routes>
       </AppLayout>
     </BrowserRouter>

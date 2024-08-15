@@ -15,10 +15,7 @@ const Header = () => {
     { path: "/western", label: "양식" },
   ];
 
-  const signItems = [
-    { path: "/login", label: "로그인" },
-    { path: "/signup", label: "회원가입" },
-  ];
+  const signItems = [{ path: "/sign", label: "로그인" }];
 
   return (
     <div className="header-container">
