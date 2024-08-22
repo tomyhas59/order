@@ -195,17 +195,17 @@
 }
 
 .menu-list-container {
-  width: 1024px;
+  width: 70%;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 20px;
 }
 
 .menu {
   position: relative;
-  width: 300px;
-  height: 300px;
+  width: 200px;
+  height: 200px;
   border-radius: 20px;
   box-shadow: 0 20px 40px -10px #aef72f;
   perspective: 1000px;
@@ -215,9 +215,10 @@
   transform: perspective(750px) rotateX(27deg) scale(0.7);
 }
 
-.menu:hover {
-  transform: scale(1);
+.menu.hovered {
+  transform: scale(2) translateX(20%) translateY(45%);
   box-shadow: 0 50px 80px -20px #4f7016;
+  z-index: 999;
 }
 
 .menu-inner {
@@ -229,7 +230,7 @@
   transition: transform 0.6s;
 }
 
-.menu:hover .menu-inner {
+.menu-inner.hovered {
   transform: rotateY(180deg);
 }
 
@@ -251,4 +252,32 @@
   color: #ffffff;
   box-shadow: 0 5px 20px 0c4b9e;
   transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  > p {
+    color: red;
+  }
+}
+
+.food-name {
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  opacity: 0;
+  transform: translateX(-200px);
+}
+
+.food-name.hovered {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.price {
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  opacity: 0;
+  transform: translateX(200px);
+}
+
+.price.hovered {
+  opacity: 1;
+  transform: translateX(0);
 }

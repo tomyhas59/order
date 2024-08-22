@@ -64,10 +64,10 @@ const App = () => {
     <BrowserRouter>
       <AppLayout>
         <Routes>
-          <Route path="/" element={<Korean data={data.korean} />} />
-          <Route path="/chinese" element={<Chinese data={data.chinese} />} />
-          <Route path="/japanese" element={<Japanese data={data.japanese} />} />
-          <Route path="/western" element={<Western data={data.western} />} />
+          <Route path="/" element={<Korean data={data} />} />
+          <Route path="/chinese" element={<Chinese data={data} />} />
+          <Route path="/japanese" element={<Japanese data={data} />} />
+          <Route path="/western" element={<Western data={data} />} />
           <Route path="/sign" element={<Sign />} />
         </Routes>
       </AppLayout>
