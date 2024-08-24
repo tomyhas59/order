@@ -23,16 +23,16 @@ const MenuListRenderer = ({ data }) => {
       {data.map((item, i) => (
         <div
           key={i}
-          className={`menu ${hoveredIndex === i ? "hovered" : ""}`}
+          className={`menu ${hoveredIndex === i ? "clicked" : ""}`}
           onClick={() => setHoveredIndex(i)}
         >
-          <div className={`menu-inner ${hoveredIndex === i ? "hovered" : ""}`}>
+          <div className={`menu-inner ${hoveredIndex === i ? "clicked" : ""}`}>
             <div className="menu-front"></div>
             <div className="menu-back">
-              <p className={`food-name ${hoveredIndex === i ? "hovered" : ""}`}>
+              <p className={`food-name ${hoveredIndex === i ? "clicked" : ""}`}>
                 메뉴: {item.menu}
               </p>
-              <p className={`price ${hoveredIndex === i ? "hovered" : ""}`}>
+              <p className={`price ${hoveredIndex === i ? "clicked" : ""}`}>
                 가격: {item.price}
               </p>
             </div>

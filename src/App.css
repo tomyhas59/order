@@ -197,9 +197,8 @@
 .menu-list-container {
   width: 70%;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .menu {
@@ -207,15 +206,18 @@
   width: 200px;
   height: 200px;
   border-radius: 20px;
-  box-shadow: 0 20px 40px -10px #aef72f;
   perspective: 1000px;
   background-color: #aef72f;
   border: 2px solid #4f7016;
   transition: 0.4s ease-in-out transform, 0.4s ease-in-out;
   transform: perspective(750px) rotateX(27deg) scale(0.7);
+  cursor: pointer;
+  &:hover {
+    box-shadow: 0 20px 40px -10px #aef72f;
+  }
 }
 
-.menu.hovered {
+.menu.clicked {
   transform: scale(2) translateX(20%) translateY(45%);
   box-shadow: 0 50px 80px -20px #4f7016;
   z-index: 999;
@@ -230,7 +232,7 @@
   transition: transform 0.6s;
 }
 
-.menu-inner.hovered {
+.menu-inner.clicked {
   transform: rotateY(180deg);
 }
 
@@ -266,7 +268,7 @@
   transform: translateX(-200px);
 }
 
-.food-name.hovered {
+.food-name.clicked {
   opacity: 1;
   transform: translateX(0);
 }
@@ -277,7 +279,7 @@
   transform: translateX(200px);
 }
 
-.price.hovered {
+.price.clicked {
   opacity: 1;
   transform: translateX(0);
 }
