@@ -250,6 +250,7 @@
 }
 
 .menu-back {
+  position: relative;
   background: linear-gradient(to right, #28dc18, #2be79b);
   color: #ffffff;
   box-shadow: 0 5px 20px 0c4b9e;
@@ -258,7 +259,7 @@
   flex-direction: column;
   justify-content: space-around;
   > p {
-    color: red;
+    color: rgb(207, 78, 78);
   }
 }
 
@@ -282,4 +283,16 @@
 .price.clicked {
   opacity: 1;
   transform: translateX(0);
+}
+
+.close-button {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  border: none;
+  background-color: inherit;
+  cursor: pointer;
+  &:hover {
+    color: red;
+  }
 }
