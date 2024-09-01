@@ -1,12 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Category = ({ to, children }) => (
-  <li className="category">
-    <Link to={to}>{children}</Link>
-  </li>
-);
-
 const Header = () => {
   const menuItems = [
     { path: "/", label: "한식" },
@@ -28,17 +22,17 @@ const Header = () => {
       </div>
       <ul className="country">
         {menuItems.map((item, index) => (
-          <Category key={index} to={item.path}>
-            {item.label}
-          </Category>
+          <li key={index} className="category">
+            <Link to={item.path}>{item.label}</Link>
+          </li>
         ))}
       </ul>
 
       <ul className="sign">
         {signItems.map((item, index) => (
-          <Category key={index} to={item.path}>
-            {item.label}
-          </Category>
+          <li key={index} className="category">
+            <Link to={item.path}>{item.label}</Link>
+          </li>
         ))}
       </ul>
     </div>
