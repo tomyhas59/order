@@ -84,13 +84,13 @@ const SignInContainer = styled.div`
 
 const SignUpContainer = styled.div`
   ${absolutePosition}
-
   opacity: 0;
   ${(props) =>
     props.active &&
     css`
       transform: translateX(100%);
       opacity: 1;
+      z-index: 2;
     `}
 `;
 

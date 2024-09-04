@@ -9,8 +9,6 @@ const Header = () => {
     { path: "/western", label: "양식" },
   ];
 
-  const signItems = [{ path: "/sign", label: "로그인" }];
-
   return (
     <div className="header-container">
       <div className="logo">
@@ -22,19 +20,14 @@ const Header = () => {
       </div>
       <ul className="country">
         {menuItems.map((item, index) => (
-          <li key={index} className="category">
-            <Link to={item.path}>{item.label}</Link>
-          </li>
+          <Link to={item.path} className="category">
+            {item.label}
+          </Link>
         ))}
       </ul>
-
-      <ul className="sign">
-        {signItems.map((item, index) => (
-          <li key={index} className="category">
-            <Link to={item.path}>{item.label}</Link>
-          </li>
-        ))}
-      </ul>
+      <Link to="/sign" className="sign">
+        로그인
+      </Link>
     </div>
   );
 };
