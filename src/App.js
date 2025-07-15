@@ -1,12 +1,11 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-
-import Gsap from "./pages/Gsap";
+import SignUp from "./pages/SignUp";
 
 const App = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Gsap />} />
+        <Route path="/" element={<SignUp />} />
       </Routes>
     </BrowserRouter>
   );
