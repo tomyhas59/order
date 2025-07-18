@@ -97,7 +97,6 @@ const Gsap = () => {
 
 export default Gsap;
 
-// Styled Components
 const Wrapper = styled.div`
   overflow-x: hidden;
   background: #fff;

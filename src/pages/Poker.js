@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import styled from "styled-components";
 import gsap from "gsap";
+import Notification from "../components/Notification";
 
 const HAND_SIZE = 8;
 
@@ -32,7 +33,7 @@ export default function Poker() {
       setHand(firstHand);
       setDeck(deck.slice(HAND_SIZE));
     }
-  }, []);
+  }, [deck, hand]);
 
   const toggleSelect = (id) => {
     if (isAnimating) return;
@@ -113,8 +114,9 @@ export default function Poker() {
 
   return (
     <Container>
-      <Deck ref={deckRef}>덱 ({deck.length}장)</Deck>
+      <Notification />
 
+      <Deck ref={deckRef}>덱 ({deck.length}장)</Deck>
       <Hand>
         {[...Array(HAND_SIZE)].map((_, idx) => {
           const card = hand[idx];
@@ -131,7 +133,6 @@ export default function Poker() {
           );
         })}
       </Hand>
-
       {animCard && (
         <AnimCard
           id={`anim-card-${animCard.key}`}
@@ -144,7 +145,6 @@ export default function Poker() {
           {animCard.card.label}
         </AnimCard>
       )}
-
       <Button onClick={onDiscard} disabled={isAnimating}>
         선택 카드 버리기 & 드로우
       </Button>
@@ -153,6 +153,9 @@ export default function Poker() {
 }
 
 const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 90vw;
   max-width: 720px;
   margin: 40px auto;
