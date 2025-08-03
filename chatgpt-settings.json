@@ -1,0 +1,17 @@
+{
+  "model": "gpt-4o-mini",
+  "temperature": 0.5,
+  "max_tokens": 1000,
+  "style": "friendly and concise",
+  "language": "ko",
+  "coding_language": "typescript, react",
+  "naming_convention": "camelCase for variables and functions, PascalCase for components",
+  "comment_policy": "Write clear, concise comments explaining complex logic",
+  "forbidden_patterns": ["any type usage"],
+  "prompt_tips": [
+    "Generate functional React components with hooks",
+    "Use Zustand for state management",
+    "Mobile-first responsive design",
+    "Follow TypeScript best practices"
+  ]
+}
