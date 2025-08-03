@@ -33,7 +33,6 @@ const SearchFilterPage: React.FC = () => {
   return (
     <Container>
       <Title>검색조건 설정</Title>
-
       <Section>
         <LocationSelector />
       </Section>
